@@ -8,7 +8,8 @@ interface Data {
 }
 
 
-import data from './data.json'
+// import data from './data.json'
+const data = require('./data.json');
 
 
 app.use(express.json())
@@ -20,7 +21,7 @@ app.get('/', (req : Request, res:Response) => {
       .then(json => res.send(json))
 })
 
-// CRUD
+
 
 
 app.get('/users' , (req:Request , res:Response) => {
